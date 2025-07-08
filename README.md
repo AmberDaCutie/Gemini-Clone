@@ -7,7 +7,7 @@ The backend securely handles API key management and request/response processing,
 
 ## Demo
 
-![Gemini Clone Demo](./demo.gif)
+![Gemini Clone Demo](./Gemini.gif)
 
 ---
 
