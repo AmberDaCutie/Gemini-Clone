@@ -74,7 +74,7 @@ const Main = () => {
                     </div>
                 </div>
                 <p className='bottom-info'>
-                    This is made by your dad ;)
+                    This is made by Aryan Chauhan
                 </p>
             </div>
         </div>
