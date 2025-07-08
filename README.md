@@ -1,12 +1,102 @@
-# React + Vite
+# Gemini Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive frontend clone of Google Gemini built using React and Vite. This project replicates the core UI/UX of Gemini’s AI interface, including animated gradients, prompt-driven interactions, reusable component design, and responsive layout strategies.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo
 
-## Expanding the ESLint configuration
+![Gemini Clone Demo](./demo.gif)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Project Structure
+
+```
+
+gemini/
+├── public/              # Static assets (favicon, logo, etc.)
+│   ├── logo.png
+│   └── vite.svg
+├── src/
+│   ├── assets/          # Global assets like images, fonts (currently empty)
+│   ├── components/
+│   │   ├── Main/        # Main section of the UI
+│   │   │   ├── Main.css
+│   │   │   └── Main.jsx
+│   │   └── Sidebar/     # Sidebar navigation
+│   │       ├── Sidebar.css
+│   │       └── Sidebar.jsx
+│   ├── config/          # API configurations and constants
+│   │   └── gemini.js
+│   ├── context/         # Context API setup
+│   │   └── Context.jsx
+│   ├── App.jsx          # Root component
+│   ├── index.css        # Global styles
+│   └── main.jsx         # Entry point for React
+├── index.html           # HTML template with favicon and root div
+├── .env                 # Environment variables (e.g. API keys)
+├── vite.config.js       # Vite build configuration
+├── package.json         # Project metadata and dependencies
+└── README.md
+
+````
+## 🛠️ Features
+
+- **React + Vite** for fast builds and hot module replacement.
+- **Responsive layout** using flexbox and grid.
+- **Reusable components** (`Main`, `Sidebar`) for clean modular structure.
+- **Animated gradient text** for visual appeal.
+- **Context API** structure ready for state management or API integration.
+
+## 📦 Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/gemini-clone.git
+cd gemini-clone
+npm install
+````
+
+---
+
+## 📦 Running the App
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## 🌐 Deployment
+
+You can deploy this app easily using platforms like:
+
+* [Vercel](https://vercel.com/)
+* [Netlify](https://netlify.com/)
+* [GitHub Pages](https://pages.github.com/) (with extra setup)
+
+Make sure your `logo.png` or any favicon is placed inside `/public` to ensure browser compatibility.
+
+
+## ✍️ Author
+**Aryan Chauhan**
+Let me know if you'd like:
+- A badge section (Vite, React, MIT License, etc.)
+- A GitHub deploy guide
+- Instructions to add Gemini API integration or TTS/voice features.
