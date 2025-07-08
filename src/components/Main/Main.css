@@ -34,9 +34,11 @@
 }
 
 .main .greet span {
-    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    background: linear-gradient(270deg, #4b90ff, #ff5546, #4b90ff);
+    background-size: 600% 600%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
 }
 
 .main .cards {
@@ -182,6 +184,18 @@
     font-size: 17px;
     font-weight: 300;
     line-height: 1.8;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @media (max-width:600px) {
