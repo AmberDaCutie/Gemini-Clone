@@ -1,6 +1,7 @@
 # Gemini Clone
 
-A modern, responsive frontend clone of Google Gemini built using React and Vite. This project replicates the core UI/UX of Gemini’s AI interface, including animated gradients, prompt-driven interactions, reusable component design, and responsive layout strategies.
+A modern, responsive full-stack clone of Google Gemini built with React and Vite on the frontend, and integrated with the Gemini API for backend communication. This project replicates Gemini's conversational AI interface, with animated gradient greetings, a prompt-driven layout, and a modular component architecture.
+The backend securely handles API key management and request/response processing, allowing for a clean separation of concerns between UI rendering and data flow.
 
 ---
 
@@ -19,9 +20,9 @@ gemini/
 │   ├── logo.png
 │   └── vite.svg
 ├── src/
-│   ├── assets/          # Global assets like images, fonts (currently empty)
+│   ├── assets/          # Global assets like images, fonts, etc 
 │   ├── components/
-│   │   ├── Main/        # Main section of the UI
+│   │   ├── Main/        # Main section of the gemini Interface
 │   │   │   ├── Main.css
 │   │   │   └── Main.jsx
 │   │   └── Sidebar/     # Sidebar navigation
@@ -98,5 +99,5 @@ Make sure your `logo.png` or any favicon is placed inside `/public` to ensure br
 **Aryan Chauhan**
 Let me know if you'd like:
 - A badge section (Vite, React, MIT License, etc.)
-- A GitHub deploy guide
+- A GitHub deploy guide.
 - Instructions to add Gemini API integration or TTS/voice features.
