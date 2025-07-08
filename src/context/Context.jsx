@@ -19,39 +19,28 @@ const ContextProvider = (props) => {
             setResultData(prev=>prev+nextWord);
         }, 75 * index)
     }
-    const onSent = async(prompt) => {
-        setResultData("");
-        setLoading(true);
-        setShowResults(true);
-        let response;
-        if(prompt !== undefined) {
-            response = await main(prompt);
-            setRecentPrompt(prompt);
-        } else {
-            setPrevPrompts(prev => [...prev, input]);
-            setRecentPrompt(input);
-            response = await main(input)
-        }
-        
-        let responseArray = response.split("**");
-        let newArray;
-        for(let i = 0; i < responseArray.length; i++) {
-            if(i === 0 || i%2 !== 1) {
-                newArray += responseArray[i];
-            } else {
-                newArray += "<b>" + responseArray[i] + "</b>";
-            }
-        }
+    const onSent = async (prompt) => {
+    setResultData("");
+    setLoading(true);
+    setShowResults(true);
 
-        let newResponse2 = response.split("*").join("</br>");   
-        let finalResponseArray = newResponse2.split(" ");
-        for(let i = 0; i < finalResponseArray.length; i++) {
-            const nextWord = finalResponseArray[i];
-            delayPara(i, nextWord+ " ");
-        }
-        setLoading(false);
-        setInput("");
+    let response;
+
+    if (prompt !== undefined) {
+        response = await main(prompt);
+        setRecentPrompt(prompt);
+    } else {
+        setPrevPrompts(prev => [...prev, input]);
+        setRecentPrompt(input);
+        response = await main(input);
     }
+
+    let cleanResponse = response.replace(/<\/?br\s*\/?>/gi, '\n\n');
+
+    setResultData(cleanResponse);
+    setLoading(false);
+    setInput("");
+    };
 
     const newChat = () =>   {
         setLoading(false);
