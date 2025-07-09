@@ -97,6 +97,7 @@ Make sure your `logo.png` or any favicon is placed inside `/public` to ensure br
 
 ## ✍️ Author
 **Aryan Chauhan**
+
 Let me know if you'd like:
 - A badge section (Vite, React, MIT License, etc.)
 - A GitHub deploy guide.
