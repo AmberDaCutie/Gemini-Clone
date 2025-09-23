@@ -23,7 +23,7 @@ const Main = () => {
             ? 
             <>
                 <div className="greet">
-                <p><span>Hello, </span></p>
+                <p><span>Hello, Aryan</span></p>
                 <p>How can I help you today?</p>
                 </div>
                 <div className="cards">
@@ -71,7 +71,7 @@ const Main = () => {
 
             <div className="main-bottom">
                 <div className="search-box">
-                    <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Enter a prompt here'/>
+                    <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Ask...'/>
                     <div>
                         <img src={assets.gallery_icon} alt="" />
                         <img src={assets.mic_icon} alt="" />
@@ -88,4 +88,4 @@ const Main = () => {
   )
 }
 
-export default Main;
+export default Main
