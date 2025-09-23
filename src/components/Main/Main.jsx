@@ -2,6 +2,8 @@ import React, { useContext } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../context/Context';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 const Main = () => {
 
@@ -11,7 +13,7 @@ const Main = () => {
   return (
     <div className="main">
         <div className="nav">
-            <p>Gemini</p>
+            <p>Nexa</p>
             <img src={assets.user_icon} alt="" />
         </div>
 
@@ -21,7 +23,7 @@ const Main = () => {
             ? 
             <>
                 <div className="greet">
-                <p><span>Hello, Aryan</span></p>
+                <p><span>Hello, </span></p>
                 <p>How can I help you today?</p>
                 </div>
                 <div className="cards">
@@ -56,7 +58,11 @@ const Main = () => {
                         <hr />
                         <hr />
                     </div>
-                    :<p dangerouslySetInnerHTML={{ __html: resultData }}></p>}
+                    :<div className="markdown-output">
+                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                            {resultData}
+                        </ReactMarkdown>
+                    </div>}
                     
                 </div>
              </div>
@@ -82,4 +88,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Main;
