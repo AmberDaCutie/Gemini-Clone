@@ -79,7 +79,7 @@ const Main = () => {
                     </div>
                 </div>
                 <p className='bottom-info'>
-                    This is made by Aryan Chauhan
+                    Gemini can make mistakes, so double-check it
                 </p>
             </div>
         </div>
